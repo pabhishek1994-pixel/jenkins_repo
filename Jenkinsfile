@@ -1,12 +1,13 @@
-pipeline{
-  agent any
-  stages{
-    stage('checkout'){
-      steps{
-      sh '''
-      ls -lrt
-      '''
-      }
+pipeline {
+    agent any
+
+    stages {
+        stage('checkout') {
+            steps {
+                sh '''
+                ls -lrt
+                '''
+            }
+        }
     }
-  }
 }
