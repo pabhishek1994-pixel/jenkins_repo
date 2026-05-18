@@ -2,17 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage ("check_out") {
             steps {
-                git branch: 'main',
-                    url: 'https://github.com/pabhishek1994-pixel/jenkins_repo.git',
-                    credentialsId: 'github_connect'
+                git branch: 'main', 
+                credentialsId: 'jnekins_ci', 
+                url: 'https://github.com/pabhishek1994-pixel/ca_demo_express.git'
             }
         }
-
-        stage('Build') {
+        stage ("dw_jb") {
             steps {
-                sh 'ls -lrt'
+                sh '''
+                pwd
+                ls -ltr
+                '''
             }
         }
     }
