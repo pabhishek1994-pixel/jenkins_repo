@@ -12,6 +12,10 @@ pipeline {
         stage ("dw_jb") {
             steps {
                 sh '''
+                ls -ltr
+                pwd
+                mkdir abc
+                cd abc
                 pwd
                 ls -ltr
                 '''
