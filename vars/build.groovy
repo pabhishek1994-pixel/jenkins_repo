@@ -1,3 +1,3 @@
-def sample('name') {
+def call(name) {
   echo "My name is ${name}"
 }
